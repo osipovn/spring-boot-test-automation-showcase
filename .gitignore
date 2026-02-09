@@ -25,6 +25,7 @@ out/
 ### Eclipse ###
 .classpath
 .claude/
+.allure/
 .project
 .settings/
 
