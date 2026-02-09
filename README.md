@@ -1,6 +1,6 @@
 # Spring Boot Test Automation Starter — Showcase
 
-This repository is a **showcase** for the Upwork project:
+This repository is a **showcase**:
 **"Spring Boot Test Automation Starter (JUnit5 + Integration Tests + CI Setup)"**.
 
 ## Run locally
