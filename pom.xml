@@ -17,6 +17,7 @@
   <properties>
     <java.version>21</java.version>
     <byte-buddy.version>1.17.5</byte-buddy.version>
+    <allure.version>2.29.0</allure.version>
   </properties>
 
   <dependencies>
@@ -71,6 +72,13 @@
       <version>1.20.5</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>${allure.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -84,6 +92,17 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <argLine>-javaagent:${settings.localRepository}/net/bytebuddy/byte-buddy-agent/${byte-buddy.version}/byte-buddy-agent-${byte-buddy.version}.jar</argLine>
+          <systemPropertyVariables>
+            <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.13.0</version>
+        <configuration>
+          <reportVersion>${allure.version}</reportVersion>
         </configuration>
       </plugin>
     </plugins>

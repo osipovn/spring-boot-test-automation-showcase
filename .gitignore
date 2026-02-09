@@ -36,3 +36,7 @@ out/
 
 ### Logs ###
 *.log
+
+### Allure ###
+allure-results/
+allure-report/
